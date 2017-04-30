@@ -14,10 +14,12 @@ socket.on('connect', function() {
       console.log(' [init] ');
     });
 
-    socket.on('result',function(data) {
-      console.log(data);
-      socket.emit('touch',TOKEN,random(0,9),random(0,9), function() {
-        console.log(' [touch] ');
+    socket.emit('touch',TOKEN,random(0,9),random(0,9), function() {
+      console.log(' [touch] ');
+      socket.on('result',function(data) {
+        console.log(data['score']);
+        console.log(data['trun_number']);
+        console.log(data['data']);
       })
     });
 });
