@@ -1,7 +1,7 @@
 //// load config file
 const config = require('./config.json');
 const AI = require('./AI.js');
-const AI = require('./Model.js');
+// const Model = require('./Model.js');
 const socket = require('socket.io-client')(config.HOST);
 console.log('game starting...');
 function random(min,max) {
@@ -15,8 +15,9 @@ socket.on('connect', function() {
 });
 
  socket.on('result', function(data) {
-   socket.emit('touch', config.TOKEN, random(0,9), random(0,9));
-   console.log(data);
+   var result = AI.turn(data['data'],data['turn_number'],data['score'])
+   socket.emit('touch', config.TOKEN, result[0], result[1]);
+  //  console.log(data);
  });
 
   //  socket.on('result', function(data{}) {
