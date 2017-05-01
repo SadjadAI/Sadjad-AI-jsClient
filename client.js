@@ -14,15 +14,10 @@ socket.on('connect', function() {
       console.log(' => [inited] ');
 });
 
- socket.on('result', function(data) {
+socket.on('result', function(data) {
    var result = AI.turn(data['data'],data['turn_number'],data['score'])
    socket.emit('touch', config.TOKEN, result[0], result[1]);
-  //  console.log(data);
  });
-
-  //  socket.on('result', function(data{}) {
-  //   console.log(' => [result]');
-  //  });
 });
 
 socket.on('reconnected', function() {
@@ -31,38 +26,3 @@ socket.on('reconnected', function() {
 socket.on('disconnect', function() {
     console.log(' => [disconnect]');
 });
-
-// // server events
-// // socket.on('connect', function() {
-// //     console.log(' [connected] ');
-// //     // console.log(socket.connect());
-
-// //
-// //     socket.emit('touch',TOKEN,random(0,9),random(0,9), function() {
-// //       console.log(' [touch] ');
-// //       socket.on('result',function(data) {
-// //         console.log(data['score']);
-// //         console.log(data['trun_number']);
-// //         console.log(data['data']);
-// //       })
-// //     });
-// // });
-//
-
-// socket.emit('init',TOKEN , function (){
-//     console.log(' => [inited] ');
-//     socket.on('result',function(map) {
-//       // console.log(data['trun_number']);
-//       console.log(data['data'].toJSON());
-//     });
-// });
-//
-// // socket.on('result',function(data) {
-// //   // console.log(data['trun_number']);
-// //   console.log(data['data'].toJSON());
-// // })
-
-// socket.on('reconnected', function() {
-//     console.log(' => [Reconnected]');
-// });
-//
