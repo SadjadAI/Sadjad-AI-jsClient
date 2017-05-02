@@ -24,10 +24,18 @@ module.exports = {
           console.log(" Rock Cell \n life_time : " + board[i][j]['life_time']);
         } else if (board[i][j]['type'] == "rocket") {
           // TODO : add direction on non number form in update !
-          console.log(" Rocket Cell \n Direction : " + board[i][j]['direction']);
+          if(board[i][j]['direction'] == 0)
+            console.log(" Rocket Cell \n Direction : Vertical");
+          else
+            console.log(" Rocket Cell \n Direction : Horizontal");
         } else if (board[i][j]['type'] == "glass") {
-          // TODO : add direction on non number form in update !
-          console.log(" Glass Cell \n Direction : " + board[i][j]['life_time']);
+          console.log(" Glass Cell \n life_time : " + board[i][j]['life_time']);
+        } else if (board[i][j]['type'] == "bomb") {
+          console.log(" Bomb Cell \n life_time : " + board[i][j]['life_time']);
+        } else if (board[i][j]['type'] == "wood") {
+          console.log(" Wood Cell \n life_time : " + board[i][j]['life_time']);
+        } else if (board[i][j]['type'] == "laser") {
+          console.log(" Laser Cell ");
         }
-}
+   }
 }
