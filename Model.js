@@ -37,5 +37,11 @@ module.exports = {
         } else if (board[i][j]['type'] == "laser") {
           console.log(" Laser Cell ");
         }
+   },
+   info: function(turn,score){
+     // your turns number :
+     console.log(" " + emoji.get('chart_with_upwards_trend') + " Turns : " + turn);
+     // your score number :
+     console.log(" " + emoji.get('fire') + " Score : " + score);
    }
 }

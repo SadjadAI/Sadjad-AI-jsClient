@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/amirbagh75/Sadjad-AI-jsClient#readme",
   "dependencies": {
-    "enum": "^2.4.0",
     "node-emoji": "^1.5.1",
     "sleep": "^5.1.1",
     "socket.io-client": "^1.7.3"
