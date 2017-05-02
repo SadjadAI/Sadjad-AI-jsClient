@@ -1,14 +1,20 @@
+///**********************************///
+// you should write your AI algorithm here in the turn() function !
+///**********************************///
+var sleep = require('sleep');
+var Model = require('./Model.js');
+var emoji = require('node-emoji');
+
 class AI {
-   turn(map,turn,score){
-     function random(min,max) {
-         return (Math.floor(Math.random() * (max - min + 1)) + min);
-     }
-     console.log(" New Turn Started >>");
-     console.log(map);
-     console.log(turn);
-     console.log(score);
-     console.log(" Turn Ended >>");
-     return [random(0,9),random(0,9)];
+  turn(map,turn,score){
+     sleep.sleep(1);
+     console.log(" ----------------- ");
+     console.log(" " + emoji.get('chart_with_upwards_trend') + " Turns : " + turn);
+     console.log(" " + emoji.get('fire') + " score : " + score);
+     var rand1 = Model.random(0,9);
+     var rand2 = Model.random(0,9);
+     Model.board(map,rand1,rand2);
+     return [rand1,rand2];
    }
 }
 module.exports = new AI();

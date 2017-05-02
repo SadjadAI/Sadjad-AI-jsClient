@@ -8,15 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amirbagh75/nodejsclient.git"
+    "url": "https://github.com/amirbagh75/Sadjad-AI-jsClient"
   },
   "author": "Amir BGH",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amirbagh75/nodejsclient/issues"
+    "url": "https://github.com/amirbagh75/Sadjad-AI-jsClient/issues"
   },
-  "homepage": "https://github.com/amirbagh75/nodejsclient#readme",
+  "homepage": "https://github.com/amirbagh75/Sadjad-AI-jsClient#readme",
   "dependencies": {
+    "enum": "^2.4.0",
+    "node-emoji": "^1.5.1",
+    "sleep": "^5.1.1",
     "socket.io-client": "^1.7.3"
   }
 }
